@@ -1,9 +1,9 @@
 "use client"
+import React, { useRef } from 'react'
 import PowerBtn from '@/components/PowerBtn'
 import Shdows from '@/components/Shdows'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useRef } from 'react'
 import 'remixicon/fonts/remixicon.css'
 
 
