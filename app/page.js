@@ -12,7 +12,7 @@ const page = () => {
 
   const boxref = useRef('null')
 
-  useGSAP(()=>{},{scope:[boxref,]})
+  useGSAP(()=>{},{scope:boxref})
 
 
    const handelChange =()=>{
