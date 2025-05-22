@@ -5,12 +5,14 @@ import Shdows from '@/components/Shdows'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import 'remixicon/fonts/remixicon.css'
+import { useRouter } from 'next/navigation'
 
 
 
 const Page = () => {
 
   const boxref = useRef(null);
+  const router =  useRouter()
 
   useGSAP(()=>{},{scope:boxref})
 
@@ -20,7 +22,10 @@ const Page = () => {
           duration:2,
           ease: "power2.inOut",
           stagger: 0.1,
-          rotation:"180deg"
+          rotation:"180deg",
+          onComplete:()=>{
+             router.push("/screen")
+          }
       })
    }
   
