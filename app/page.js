@@ -10,7 +10,7 @@ import 'remixicon/fonts/remixicon.css'
 
 const page = () => {
 
-  const boxref = useRef('null')
+  const boxref = useRef(null);
 
   useGSAP(()=>{},{scope:boxref})
 
