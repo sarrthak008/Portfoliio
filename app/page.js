@@ -34,7 +34,7 @@ const Page = () => {
     <div>
        <PowerBtn onClick={handelChange} />
            <div className='w-[1200px] h-[1200px] absolute  box1 top-0 right-0' ref={boxref}>
-                <Shdows color1='sky' color2='fuchsia'/>
+                <Shdows color1='sky' color2='fuchsia' intencity={200}/>
            </div>
     </div>
   )

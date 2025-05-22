@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from "@/styles/main.module.css"
+// import React from 'react'
+// import styles from "@/styles/main.module.css"
 
-const Shdows = ({color1="red",color2="blue"}) => {
+const Shdows = ({color1="red",color2="blue",intencity=90}) => {
 
      const COLORS = {
          red :  "bg-red-500",
@@ -26,8 +26,8 @@ const Shdows = ({color1="red",color2="blue"}) => {
 
   return (
     <>
-     <div className={`${COLORS[color1]} h-1/3 w-full ${styles.shadowMaker}`}></div>
-     <div className={`${COLORS[color2]} h-1/3 w-full ${styles.shadowMaker}`}></div>
+     <div className={`${COLORS[color1]} h-1/3 w-full `} style={{ filter: `blur(${intencity}px)` }}></div>
+     <div className={`${COLORS[color2]} h-1/3 w-full `} style={{ filter: `blur(${intencity}px)` }}></div>
     </>
   )
 }
