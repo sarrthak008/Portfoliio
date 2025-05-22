@@ -6,6 +6,7 @@ import Gallary from '@/components/Gallary'
 
 
 const Page = () => {
+
   return (
     <div className='h-screen w-screen overflow-hidden'>
         <NavBar/>
@@ -13,7 +14,7 @@ const Page = () => {
           <Shdows color1='amber' color2='cyan' intencity={70}/>
       </div>
 
-      <div>
+      <div className='flex p-14 h-full'>
          {
              information.map((info,index)=>(
                   info.app_name == "gallary" ? <Gallary key={index}/> : null
