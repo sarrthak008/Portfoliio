@@ -8,7 +8,7 @@ import 'remixicon/fonts/remixicon.css'
 
 
 
-const page = () => {
+const Page = () => {
 
   const boxref = useRef(null);
 
@@ -35,4 +35,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
