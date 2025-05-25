@@ -5,14 +5,14 @@ import styles from '@/styles/main.module.css'
 import Image from 'next/image'
 import GALLARY from "@/assets/gallary.png"
 import Shdows from './Shdows'
-import { openAnimation, closeAnimation } from '@/lib/animationFunc'
+import { useOpenAnimation, closeAnimation } from '@/lib/animationFunc'
 
 import information from '@/lib/data'
 import ImagerOpener from './ImagerOpener'
 
 const GallaryOpener = ({ setOpenGallary }) => {
 
-  openAnimation("box") // import open animation from the lib 
+  useOpenAnimation("box") // import open animation from the lib 
   const handelClose = () => {
     closeAnimation("box", () => setOpenGallary(false))
   }

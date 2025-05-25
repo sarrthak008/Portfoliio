@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/main.module.css'
-import {openAnimation,closeAnimation} from "@/lib/animationFunc"
+import {useOpenAnimation,closeAnimation} from "@/lib/animationFunc"
 
 const ImagerOpener = ({imgData, index}) => {
 
@@ -27,7 +27,7 @@ const ImagerOpener = ({imgData, index}) => {
 
 const OpenOneImage =({currentImg,setOpenImg})=>{
 
-    openAnimation("box")
+    useOpenAnimation("box")
 
     
 
