@@ -3,25 +3,14 @@
 import React, { useState } from 'react'
 import styles from '@/styles/main.module.css'
 import Image from 'next/image'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import GALLARY from "@/assets/gallary.png"
 import Shdows from './Shdows'
+import { openAnimation } from '@/lib/animationFunc'
 
 const GallaryOpener =({setOpenGallary})=>{
 
-     useGSAP(()=>{
-         gsap.to(".box",{
-            width:"95vw",
-            height:"95vh",
-            duration:0.4,
-            ease: "power3.out",
-            transformOrigin: "center center"
-         })
-
-          
-
-     },[])
+    openAnimation("box") // import open animation from the lib 
+    
 
 
      return(
