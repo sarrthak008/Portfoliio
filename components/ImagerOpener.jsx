@@ -29,6 +29,9 @@ const OpenOneImage =({currentImg,setOpenImg})=>{
 
     openAnimation("box")
 
+    
+
+
     return(
          <div className={`h-0 w-0 box absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ${styles.glass} overflow-hidden`}>
             <div className='float-right cursor-pointer text-3xl bg-rose-400' onClick={()=>{setOpenImg(false)}}><i className="ri-close-fill"></i></div>
