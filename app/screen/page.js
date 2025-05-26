@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar'
 import Shdows from '@/components/Shdows'
 import information from '@/lib/data'
 import Gallary from '@/components/Gallary'
+import Note from '@/components/Note'
 
 
 const Page = () => {
@@ -14,10 +15,10 @@ const Page = () => {
           <Shdows color1='amber' color2='cyan' intencity={70}/>
       </div>
 
-      <div className='flex p-14 h-full'>
+      <div className='flex mt-10 px-10 flex-wrap'>
          {
              information.map((info,index)=>(
-                  info.app_name == "gallary" ? <Gallary key={index}/> : null
+                  info.app_name == "gallary" ? <Gallary key={index}/> : info.app_name == "note" ?<Note key={index}/> :null
              ))
          }
           

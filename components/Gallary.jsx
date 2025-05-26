@@ -20,7 +20,7 @@ const GallaryOpener = ({ setOpenGallary }) => {
 
 
   return (
-    <div className={`box h-0 w-0 absolute top-[50%] left-[50%] overflow-hidden translate-x-[-50%] translate-y-[-50%] ${styles.glass}`}>
+    <div className={`z-[100] box h-0 w-0 absolute top-[50%] left-[50%] overflow-hidden translate-x-[-50%] translate-y-[-50%] ${styles.glass}`}>
       <div className='w-72 h-60 absolute bottom-0 right-0'>
         <Shdows color1='red' color2='purple' intencity={100} />
       </div>
@@ -42,10 +42,12 @@ const Gallary = () => {
 
   const [openGallary, setOpenGallary] = useState(false)
 
+
   return (
     <>
-      <div className={`${styles.glass} h-[50px] w-[50px] cursor-pointer`} onClick={() => setOpenGallary(true)}>
+      <div className={`inline-block m-4 ${styles.glass} h-[50px] w-[50px] cursor-pointer`} onClick={() => setOpenGallary(true)}>
         <Image height="100%" width="100%" src={GALLARY} alt='gallary' />
+        <p className='text-center text-sm'>{information[0]?.app_name}</p>
       </div>
 
       {openGallary && <GallaryOpener setOpenGallary={setOpenGallary} />}
